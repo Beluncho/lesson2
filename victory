@@ -1,0 +1,79 @@
+name = input('Введите своё имя: ')
+print('Доброго времени суток,', name, ', это викторина по годам правления ген секов СССР')
+print('Вам будет предложено вспомнить год начала правления ген секов по порядку')
+print('Хотите поучавствовать в викторине? да/нет: ')
+
+answer0 = 'да'
+answer01 = input('Ведите ответ: ')
+
+
+while answer01 == 'да':
+    answer1 = None
+    answer2 = None
+    answer3 = None
+    answer4 = None
+    answer5 = None
+    answer6 = None
+    star_ck1 = 1922
+    star_ck2 = 1953
+    star_ck3 = 1964
+    star_ck4 = 1982
+    star_ck5 = 1984
+    eclipse_ck = 1985
+    ball = 0
+    max_ball = 6
+    print('Начать викторину/начать заново: да/нет ?')
+    answer01 = input('Ведите ответ: ')
+
+    if answer01 == answer0:
+        answer1 = int(input('Укажите год начала правления Сталина И.В: ')) # answer 1922
+
+        if answer1 == star_ck1:
+            ball +=1
+        else:
+            ball +=0
+        answer2 = int(input('Укажите год начала правления Хрущева Н.С: ')) # answer 1953
+
+        if answer2 == star_ck2:
+            ball +=1
+        else:
+            ball +=0
+
+        answer3 = int(input('Укажите год начала правления Брежнева Л.И: ')) # answer 1964
+
+        if answer3 == star_ck3:
+            ball +=1
+        else:
+            ball +=0
+
+        answer4 = int(input('Укажите год начала правления Андропова Ю.В: ')) # answer 1982
+
+        if answer4 == star_ck4:
+            ball +=1
+        else:
+            ball +=0
+
+        answer5 = int(input('Укажите год начала правления Черненко К.У: ')) # answer 1984
+
+        if answer5 == star_ck5:
+            ball +=1
+        else:
+            ball +=0
+
+        answer6 = int(input('Укажите год начала правления Хрущева Н.С: ')) # answer 1985
+
+        if answer6 == eclipse_ck:
+            ball +=1
+        else:
+            ball +=0
+    right_ball_perc = ball * 100 / max_ball
+    left_ball_perc = 100 - right_ball_perc
+    mistake = 6 - ball
+    print('-'*100)
+    print(name)
+    print('Итого правельных ответов: ', ball)
+    print('Итого не правельных ответов: ', mistake)
+    print('Процент правильных ответов: ', right_ball_perc, '%')
+    print('Процент не правильных ответов: ', left_ball_perc, '%')
+else:
+    print('end')
