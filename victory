@@ -60,7 +60,7 @@ while answer01 == 'да':
         else:
             ball +=0
 
-        answer6 = int(input('Укажите год начала правления Хрущева Н.С: ')) # answer 1985
+        answer6 = int(input('Укажите год начала правления Горбачева М.С: ')) # answer 1985
 
         if answer6 == eclipse_ck:
             ball +=1
